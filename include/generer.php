@@ -7,20 +7,25 @@ use Picqer\Barcode\BarcodeGeneratorPNG;
 $pdo = new PDO('mysql:host=127.0.0.1;dbname=InterLeak;', $bdd['utilisateur'], $bdd['mdp']);
 
 do {
-    $donnee = rand(300, 999);
-    $rq = $pdo->query("SELECT * FROM `utilise` WHERE `donnee` = $donnee;");
+    $donnee = rand(00, 99);
+    $jour = date('d') - rand(1, date('d') - 1);
+    if (strlen($jour) == 1) {
+        $jour = "0" . $jour;
+    }
+    $rq = $pdo->query("SELECT * FROM `utilise` WHERE `donnee` = $donnee AND `jour` = $jour;");
     $reponse = $rq->fetch();
 } while ($reponse);
 
-$code = '2023010913' . $donnee . '018500304629';
+$code = '202301' . $jour . '13' . $donnee . '018500304629';
 $date = date('U');
-$rq = $pdo->prepare('INSERT INTO `utilise` (`ID`, `donnee`, `code`, `date`, `IP`, `UA`) VALUES (null, :donnee, :code, :date, :IP, :UA);');
+$rq = $pdo->prepare('INSERT INTO `utilise` (`ID`, `donnee`, `jour`, `code`, `date`, `IP`, `UA`) VALUES (null, :donnee, :jour, :code, :date, :IP, :UA);');
 $rq->execute([
     ':donnee' => $donnee,
     ':code' => $code,
     ':date' => $date,
     ':IP' => $_SERVER['REMOTE_ADDR'],
-    ':UA' => $_SERVER['HTTP_USER_AGENT']
+    ':UA' => $_SERVER['HTTP_USER_AGENT'],
+    ':jour' => $jour
 ]);
 
 $generateur = new BarcodeGeneratorPNG();
