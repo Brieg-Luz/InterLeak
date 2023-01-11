@@ -1,3 +1,4 @@
 /vendor/
 .DS_store
 /config/secure.php
+/log/*.log
