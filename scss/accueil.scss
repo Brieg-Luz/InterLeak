@@ -1,0 +1,16 @@
+$rouge: #e2001a;
+$blanc : #f7f7f7;
+$noir: #000000;
+
+#demarrage {
+    img {
+        width: 200px;
+        margin: 20px 0;
+    }
+
+    #slogan {
+        color: $rouge;
+        font-family: "Liberation Sans", sans-serif, arial;
+        font-size: 1.5em;
+    }
+}

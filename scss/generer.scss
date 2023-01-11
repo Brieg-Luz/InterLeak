@@ -1,0 +1,24 @@
+$rouge: #e2001a;
+$blanc: #f7f7f7;
+$noir: #000000;
+
+#genere {
+    #premiere {
+        font-family: "Liberation Sans", sans-serif, arial;
+        font-size: 2em;
+        color: $rouge;
+        text-decoration: 2px underline;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    #remerciement {
+        color: $noir;
+        font-size: 1.2em;
+        font-family: "Liberation Sans", sans-serif, arial;
+    }
+}
+
+#CB {
+    max-width: 80vw;
+}

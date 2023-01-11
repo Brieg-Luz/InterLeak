@@ -1,0 +1,1 @@
+watch -b -c -n 1 "sassc scss/general.scss public/css/general.css & sassc scss/accueil.scss public/css/accueil.css & sassc scss/generer.scss public/css/generer.css & sassc scss/bibliotheque.scss public/css/bibliotheque.css"

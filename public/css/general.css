@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding-top: 110px;
+  font-family: "Liberation Sans", sans-serif, Arial; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #e2001a; }
+  header img {
+    height: 70px;
+    margin-left: 10px; }
+  header #entete-nouveau {
+    height: 100%;
+    padding: 0px 20px;
+    color: #e2001a;
+    text-decoration: none;
+    font-family: "Liberation Sans", sans-serif, Arial;
+    font-size: 0.8em;
+    background-color: #f7f7f7;
+    line-height: 100px; }
+
+.fenetre-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: 95%;
+  min-width: 50%;
+  height: max-content;
+  max-height: calc(100% - 200px);
+  border-radius: 10px;
+  border: 3px solid #e2001a;
+  background-color: #f7f7f7; }
+
+.lien-style {
+  background-color: #e2001a;
+  color: #f7f7f7;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 2px solid #e2001a;
+  transition: all ease-in-out 0.5s;
+  font-family: "Liberation Sans", sans-serif, arial;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 20px 0; }
+  .lien-style:hover {
+    background-color: #f7f7f7;
+    color: #e2001a; }
+
+.titre-style {
+  font-family: "Liberation Sans", sans-serif, arial;
+  font-size: 2em;
+  color: #e2001a;
+  text-decoration: 2px underline; }

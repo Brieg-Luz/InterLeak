@@ -1,0 +1,15 @@
+#genere #premiere {
+  font-family: "Liberation Sans", sans-serif, arial;
+  font-size: 2em;
+  color: #e2001a;
+  text-decoration: 2px underline;
+  margin: 0;
+  margin-bottom: 10px; }
+
+#genere #remerciement {
+  color: #000000;
+  font-size: 1.2em;
+  font-family: "Liberation Sans", sans-serif, arial; }
+
+#CB {
+  max-width: 80vw; }
